@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-java -cp c/Users/Keefer/IdeaProjects/passwordgenerator/src xkcdpwgen "$@"
+java xkcdpwgen "$@"
