@@ -3,7 +3,6 @@ import java.io.*;
 
 public class xkcdpwgen {
 
-  private static final String WORDS_FILE = "project4/words.txt";
   private static final String SYMBOLS = "~!@#$%^&*.:;";
 
   public static void main(String[] args) throws IOException {
@@ -15,7 +14,7 @@ public class xkcdpwgen {
     for (int i = 0; i < args.length; i++) {
       switch (args[i]) {
         case "-w":
-        case "--words":
+        case "--words.txt":
           numWords = Integer.parseInt(args[++i]);
           break;
         case "-c":
@@ -39,7 +38,7 @@ public class xkcdpwgen {
 
     List<String> words = readWordsFromFile();
     if (words.isEmpty()) {
-      System.out.println("Error: Could not read words file.");
+      System.out.println("Error: Could not read words.txt file.");
       return;
     }
 
@@ -49,7 +48,8 @@ public class xkcdpwgen {
 
   private static List<String> readWordsFromFile() throws IOException {
     List<String> words = new ArrayList<>();
-    BufferedReader reader = new BufferedReader(new FileReader(WORDS_FILE));
+    File newFile = new File("./words.txt");
+    BufferedReader reader = new BufferedReader(new FileReader(newFile));
     String line;
     while ((line = reader.readLine()) != null) {
       words.add(line);
