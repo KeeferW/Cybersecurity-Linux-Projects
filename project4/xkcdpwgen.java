@@ -48,8 +48,7 @@ public class xkcdpwgen {
 
   private static List<String> readWordsFromFile() throws IOException {
     List<String> words = new ArrayList<>();
-    File newFile = new File("./words.txt");
-    BufferedReader reader = new BufferedReader(new FileReader(newFile));
+    BufferedReader reader = new BufferedReader(new FileReader("./src/words.txt"));
     String line;
     while ((line = reader.readLine()) != null) {
       words.add(line);
