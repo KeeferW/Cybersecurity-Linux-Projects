@@ -38,7 +38,7 @@ public class xkcdpwgen {
 
     List<String> words = readWordsFromFile();
     if (words.isEmpty()) {
-      System.out.println("Error: Could not read words.txt file.");
+      System.out.println("Could not read words.txt file.");
       return;
     }
 
@@ -48,7 +48,7 @@ public class xkcdpwgen {
 
   private static List<String> readWordsFromFile() throws IOException {
     List<String> words = new ArrayList<>();
-    BufferedReader reader = new BufferedReader(new FileReader("./src/words.txt"));
+    BufferedReader reader = new BufferedReader(new FileReader("./words.txt"));
     String line;
     while ((line = reader.readLine()) != null) {
       words.add(line);
