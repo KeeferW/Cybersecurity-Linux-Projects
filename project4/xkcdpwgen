@@ -1,2 +1,2 @@
 #!/bin/bash
-java xkcdpwgen.class "$@"
+java xkcdpwgen.java "$@"
