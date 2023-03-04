@@ -3,7 +3,7 @@ import java.io.*;
 
 public class xkcdpwgen {
 
-  private static final String WORDS_FILE = "C:\\Users\\Keefer\\IdeaProjects\\passwordgenerator\\src\\words.txt";
+  private static final String WORDS_FILE = "./words.txt";
   private static final String SYMBOLS = "~!@#$%^&*.:;";
 
   public static void main(String[] args) throws IOException {
