@@ -1,0 +1,19 @@
+abi <abi/3.0>,
+include <tunables/global>
+/home/keefer/p2 {
+  include <abstractions/base>
+  include <abstractions/apache2-common>
+  include <abstractions/user-tmp>
+  /tmp/project* rw,
+  /etc/crontab r,
+  /etc/fstab r,
+  /etc/hosts r,
+  /etc/passwd r,
+  /home/keefer/p2 r,
+  /proc/buddyinfo r,
+  /proc/version r,
+  /usr/lib/aarch64-linux-gnu/libc.so.6 mr,
+  /var/log/syslog r,
+  /home/keefer/template r,
+  /home/keefer/.project2/config w,
+}
